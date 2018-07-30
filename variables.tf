@@ -24,16 +24,16 @@ variable ec2_machine_size {
   default = "r3.xlarge"
 }
 
-# AWS key name (license)
+# AWS key name (certficate)
 variable qlik_sense_key_name {}
 
-# Service account passwor
+# Service account password
 variable qse_svc_password {}
 
 # Postgres password for Qlik Sense administrator
 variable qse_db_admin_password {}
 
-# Postgres passworf for repository
+# Postgres password for repository
 variable qse_db_repository_password {}
 
 # Qlik Sense serial number
