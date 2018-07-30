@@ -1,12 +1,19 @@
 ### Variables
 
 # AWS Access key
-variable "access_key" {}
+variable "access_key" {
+  default = "YOUR_ACCESS_KEY"
+}
 
 # AWS secret key
-variable "secret_key" {}
+variable "secret_key" {
+  default = "YOUR_SECRET_KEY"
+}
 
-AWS region variable "region" {}
+#AWS region 
+variable "region" {
+  default = "YOUR_DESIRED_REGION"
+}
 
 # User to create in Windows and grant adminstrator access to
 variable "user" {}
