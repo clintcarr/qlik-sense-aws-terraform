@@ -17,6 +17,7 @@ New-NetFirewallRule -DisplayName 'RDP Port 3389' -Direction Inbound -LocalPort 3
 New-NetFirewallRule -DisplayName 'Qlik Sense' -Direction Inbound -LocalPort 443 -Protocol TCP -Action Allow
 
 # Start Qlik Sense Enterprise using the Qlik provided UserStartup.ps1 script
+Unregister-ScheduledTask -TaskName 'UserLogonTask' -Confirm:$false
 $SvcUser = 'qliksvc'
 $SvcPassword = "${qse_svc_password}" | ConvertTo-SecureString -AsPlainText -Force # Set service user password
 $DbSuPassword = "${qse_db_admin_password}" | ConvertTo-SecureString -AsPlainText -Force # Set DB superuser password
